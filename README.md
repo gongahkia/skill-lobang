@@ -8,56 +8,6 @@ Small, Full Stack [Web App](#architecture) for [SkillsFuture courses](#usage) in
 
 `Skill Lobang` is a comprehensive web application designed to help users in Singapore efficiently discover, compare, and optimize their SkillsFuture credit spending. The platform aggregates courses from multiple providers, offers intelligent filtering and sorting capabilities, and provides actionable insights to maximize the value of your SkillsFuture journey.
 
-## Usage
-
-> [!IMPORTANT]
-> Read the [legal disclaimer](#legal-disclaimer) before using `Skill Lobang`.
-
-### Local Development
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/gongahkia/skill-lobang.git
-   cd skill-lobang
-   ```
-
-2. **Environment Setup**
-   ```bash
-   cp .env.example .env
-   # Edit .env with your configuration
-   ```
-
-3. **Using Docker (Recommended)**
-   ```bash
-   # Start all services
-   docker-compose up -d
-
-   # The application will be available at:
-   # Frontend: http://localhost:3000
-   # Backend API: http://localhost:3001
-   ```
-
-4. **Manual Setup**
-   ```bash
-   # Install root dependencies
-   npm install
-
-   # Install backend dependencies
-   cd backend
-   npm install
-
-   # Install frontend dependencies
-   cd ../frontend
-   npm install
-
-   # Start PostgreSQL and Redis
-   # Then run the development servers
-   cd ..
-   npm run dev
-   ```
-
-Course data is refreshed daily at 2 AM SGT via automated scraping.
-
 ## Stack
 
 * *Frontend*: [React](https://react.dev/) via [Next.js](https://nextjs.org/)
@@ -71,8 +21,8 @@ Course data is refreshed daily at 2 AM SGT via automated scraping.
     * *Authentication*: [JWT](https://jwt.io/), [bcrypt](https://www.npmjs.com/package/bcrypt)
     * *Validation*: [Joi](https://joi.dev/), [express-validator](https://express-validator.github.io/)
     * *Web Scraping*: [Puppeteer](https://pptr.dev/), [Cheerio](https://cheerio.js.org/)
-* *Database*: [PostgreSQL](https://www.postgresql.org/) + [Redis](https://redis.io/)
-    * *Primary Database*: [PostgreSQL](https://www.postgresql.org/)
+* *DB*: [PostgreSQL](https://www.postgresql.org/) + [Redis](https://redis.io/)
+    * *Primary DB*: [PostgreSQL](https://www.postgresql.org/)
     * *ORM*: [Prisma](https://www.prisma.io/) or [TypeORM](https://typeorm.io/)
     * *Caching*: [Redis](https://redis.io/)
     * *Connection Pooling*: [node-postgres](https://node-postgres.com/)
@@ -80,6 +30,44 @@ Course data is refreshed daily at 2 AM SGT via automated scraping.
 * *Scheduling*: [node-cron](https://www.npmjs.com/package/node-cron)
 * *Testing*: [Jest](https://jestjs.io/), [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 * *Linting*: [ESLint](https://eslint.org/), [Prettier](https://prettier.io/)
+
+## Usage
+
+> [!IMPORTANT]
+> Read the [legal disclaimer](#legal-disclaimer) before using `Skill Lobang`.
+
+Course data is refreshed daily at 2 AM SGT via automated scraping.
+
+1. First clone the repository.
+
+```console
+$ git clone https://github.com/gongahkia/skill-lobang.git
+$ cd skill-lobang
+```
+
+2. Then setup your local environment and fill `.env` with your own secrets.
+
+```console
+$ cp .env.example .env
+```
+
+3. Run the below commands to spin up a Docker container. Access the [Frontend](./frontend/) at http://localhost:3000 and [Backend](./backend) at http://localhost:3001.
+
+```console
+$ docker-compose up -d
+```
+
+4. Alternatively run the setup manually.
+
+```console
+$ npm install
+$ cd backend
+$ npm install
+$ cd ../frontend
+$ npm install
+$ cd ..
+$ npm run dev
+```
 
 ## Features
 
