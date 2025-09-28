@@ -13,9 +13,50 @@ Small, Full Stack [Web App](#architecture) for [SkillsFuture courses](#usage) in
 > [!IMPORTANT]
 > Read the [legal disclaimer](#legal-disclaimer) before using `Skill Lobang`.
 
-Course data is refreshed daily at 2 AM SGT via automated scraping.
+### Local Development
 
-Use the live application [***here***](http://localhost:3000) once deployed.
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/gongahkia/skill-lobang.git
+   cd skill-lobang
+   ```
+
+2. **Environment Setup**
+   ```bash
+   cp .env.example .env
+   # Edit .env with your configuration
+   ```
+
+3. **Using Docker (Recommended)**
+   ```bash
+   # Start all services
+   docker-compose up -d
+
+   # The application will be available at:
+   # Frontend: http://localhost:3000
+   # Backend API: http://localhost:3001
+   ```
+
+4. **Manual Setup**
+   ```bash
+   # Install root dependencies
+   npm install
+
+   # Install backend dependencies
+   cd backend
+   npm install
+
+   # Install frontend dependencies
+   cd ../frontend
+   npm install
+
+   # Start PostgreSQL and Redis
+   # Then run the development servers
+   cd ..
+   npm run dev
+   ```
+
+Course data is refreshed daily at 2 AM SGT via automated scraping.
 
 ## Stack
 
