@@ -2,7 +2,7 @@
 
 # `Skill Lobang`
 
-Small, Full Stack [Web App](#architecture) for [SkillsFuture courses](#usage) in Singapore.
+Tiny Full Stack [Web App](#architecture) for managing your credits for [SkillsFuture courses](#usage) in Singapore.
 
 ## Rationale
 
