@@ -1,8 +1,12 @@
-[![](https://img.shields.io/badge/skill_lobang_1.0.0-build-passing-green)](https://github.com/gongahkia/skill-lobang/releases/tag/1.0.0)
+[![](https://img.shields.io/badge/skill_lobang_1.0.0-passing-green)](https://github.com/gongahkia/skill-lobang/releases/tag/1.0.0)
 
 # `Skill Lobang`
 
-Small, Full-stack [Web App](#architecture) for [SkillsFuture courses](#usage) in Singapore.
+Small, Full Stack [Web App](#architecture) for [SkillsFuture courses](#usage) in Singapore.
+
+## Rationale
+
+`Skill Lobang` is a comprehensive web application designed to help users in Singapore efficiently discover, compare, and optimize their SkillsFuture credit spending. The platform aggregates courses from multiple providers, offers intelligent filtering and sorting capabilities, and provides actionable insights to maximize the value of your SkillsFuture journey.
 
 ## Usage
 
